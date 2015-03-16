@@ -213,7 +213,7 @@ static NSString* stringFromData(NSData* data) {
     
     _sockets[[NSNumber numberWithUnsignedInteger:socket->_socketId]] = socket;
     
-    [self.commandDelegate sendPluginResult:[CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsInt:socket->_socketId] callbackId:command.callbackId];
+    [self.commandDelegate sendPluginResult:[CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsInt:(int)socket->_socketId] callbackId:command.callbackId];
 }
 
 - (void)update:(CDVInvokedUrlCommand*)command

@@ -12,6 +12,9 @@ The API reference is [here](https://developer.chrome.com/apps/sockets_tcpServer)
 
 # Release Notes
 
+## 1.2.2 (Mar 17, 2015)
+* ios: Fix warning about signed/unsigned ints
+
 ## 1.2.1 (Jan 27, 2015)
 * Fix compile errors on cordova-android@3.x (fixes #506)
 

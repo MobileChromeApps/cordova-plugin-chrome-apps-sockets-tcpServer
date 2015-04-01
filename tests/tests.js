@@ -2,11 +2,11 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-registerManualTests('chrome.sockets.tcpServer', function(rootEl, addButton) {
+exports.defineManualTests = function(rootEl, addButton) {
   var addr = '127.0.0.1';
   var port = 12345;
 
-  var arr = new Uint8Array(256)
+  var arr = new Uint8Array(256);
   for (var i = 0; i < arr.length; i++) {
     arr[i] = i;
   }
@@ -153,4 +153,4 @@ registerManualTests('chrome.sockets.tcpServer', function(rootEl, addButton) {
   }
 
   initPage();
-});
+};

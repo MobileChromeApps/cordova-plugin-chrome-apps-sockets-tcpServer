@@ -12,34 +12,34 @@ exports.defineManualTests = function(rootEl, addButton) {
   }
 
   function acceptErrorListener(info) {
-    logger('AcceptError on socket: ' + info.socketId);
-    logger(info);
+    console.log('AcceptError on socket: ' + info.socketId);
+    console.log(info);
     chrome.sockets.tcpServer.disconnect(info.socketId);
     chrome.sockets.tcpServer.close(info.socketId);
   }
 
   function acceptListener(info) {
-    logger('Accepted on socket: ' + info.socketId);
-    logger(info);
+    console.log('Accepted on socket: ' + info.socketId);
+    console.log(info);
     chrome.sockets.tcp.setPaused(info.clientSocketId, false, function() {
       chrome.sockets.tcp.send(info.clientSocketId, arr.buffer, function(result) {
         if (result.resultCode === 0) {
-          logger('TCP send: success');
+          console.log('TCP send: success');
         }
       });
     });
   }
 
   function receiveErrorListener(info) {
-    logger('Server RecvError on socket: ' + info.socketId);
-    logger(info);
+    console.log('Server RecvError on socket: ' + info.socketId);
+    console.log(info);
     chrome.sockets.tcp.disconnect(info.socketId);
     chrome.sockets.tcp.close(info.socketId);
   }
 
   function receiveListener(info) {
-    logger('Server Recv: success');
-    logger(info);
+    console.log('Server Recv: success');
+    console.log(info);
     chrome.sockets.tcp.disconnect(info.socketId);
     chrome.sockets.tcp.close(info.socketId);
   }
@@ -68,7 +68,7 @@ exports.defineManualTests = function(rootEl, addButton) {
     chrome.sockets.tcpServer.create(function(createInfo) {
       chrome.sockets.tcpServer.listen(createInfo.socketId, addr, port, /** backlog */ function(result){
         if (result === 0) {
-          logger('socket is listenning');
+          console.log('socket is listenning');
         }
       });
     });
@@ -84,25 +84,25 @@ exports.defineManualTests = function(rootEl, addButton) {
       chrome.sockets.tcpServer.update(createInfo.socketId, updatedProperties);
 
       chrome.sockets.tcpServer.getInfo(createInfo.socketId, function(socketInfo) {
-        logger(socketInfo);
+        console.log(socketInfo);
       });
     });
   }
 
   function getSockets() {
     chrome.sockets.tcpServer.getSockets(function(socketsInfo) {
-      logger('Get Tcp Server Sockets');
+      console.log('Get Tcp Server Sockets');
       if (!socketsInfo) return;
       for (var i = 0; i < socketsInfo.length; i++) {
-        logger(socketsInfo[i]);
+        console.log(socketsInfo[i]);
       }
     });
 
     chrome.sockets.tcp.getSockets(function(socketsInfo) {
-      logger('Get Tcp Sockets');
+      console.log('Get Tcp Sockets');
       if (!socketsInfo) return;
       for (var i = 0; i < socketsInfo.length; i++) {
-        logger(socketsInfo[i]);
+        console.log(socketsInfo[i]);
       }
     });
   }
@@ -111,7 +111,7 @@ exports.defineManualTests = function(rootEl, addButton) {
     chrome.sockets.tcpServer.getSockets(function(socketsInfo) {
       if (!socketsInfo) return;
       for (var i = 0; i < socketsInfo.length; i++) {
-        logger('closing server socket: ' + socketsInfo[i].socketId);
+        console.log('closing server socket: ' + socketsInfo[i].socketId);
         chrome.sockets.tcpServer.close(socketsInfo[i].socketId);
       }
     });

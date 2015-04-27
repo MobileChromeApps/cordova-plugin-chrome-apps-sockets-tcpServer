@@ -16,8 +16,8 @@
   <repo>https://github.com/MobileChromeApps/mobile-chrome-apps.git</repo>
   <issue>https://github.com/MobileChromeApps/mobile-chrome-apps/issues</issue>
 
-  <dependency id="org.chromium.common" />
-  <dependency id="org.chromium.sockets.tcp" />
+  <dependency id="cordova-plugin-chrome-apps-common" />
+  <dependency id="cordova-plugin-chrome-apps-sockets-tcp" />
 
   <js-module src="sockets.tcpServer.js" name="sockets.tcpServer">
     <clobbers target="chrome.sockets.tcpServer" />

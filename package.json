@@ -1,0 +1,38 @@
+{
+  "name": "cordova-plugin-chrome-apps-sockets-tcpServer",
+  "version": "1.2.3-dev",
+  "description": "This plugin provides TCP server sockets for Android and iOS.",
+  "cordova": {
+    "id": "cordova-plugin-chrome-apps-sockets-tcpserver",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MobileChromeApps/cordova-plugin-chrome-apps-sockets-tcpServer.git"
+  },
+  "keywords": [
+    "chrome",
+    "socket",
+    "sockets",
+    "tcp",
+    "server",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MobileChromeApps/cordova-plugin-chrome-apps-sockets-tcpServer/issues"
+  },
+  "homepage": "https://github.com/MobileChromeApps/cordova-plugin-chrome-apps-sockets-tcpServer"
+}

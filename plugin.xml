@@ -13,8 +13,8 @@
 
   <name>Chrome Apps Sockets Tcp Server API</name>
   <keywords>chrome,socket,sockets,tcp,server</keywords>
-  <repo>https://github.com/MobileChromeApps/mobile-chrome-apps.git</repo>
-  <issue>https://github.com/MobileChromeApps/mobile-chrome-apps/issues</issue>
+  <repo>https://github.com/MobileChromeApps/cordova-plugin-chrome-apps-sockets-tcpServer.git</repo>
+  <issue>https://github.com/MobileChromeApps/cordova-plugin-chrome-apps-sockets-tcpServer/issues</issue>
 
   <dependency id="cordova-plugin-chrome-apps-common" />
   <dependency id="cordova-plugin-chrome-apps-sockets-tcp" />

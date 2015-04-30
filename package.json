@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-chrome-apps-sockets-tcpserver",
-  "version": "1.2.3",
+  "version": "1.2.4-dev",
   "description": "This plugin provides TCP server sockets for Android and iOS.",
   "cordova": {
     "id": "cordova-plugin-chrome-apps-sockets-tcpserver",

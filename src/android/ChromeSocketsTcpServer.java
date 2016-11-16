@@ -463,12 +463,12 @@ public class ChromeSocketsTcpServer extends CordovaPlugin {
 
     void listen(String address, int port) throws IOException {
       setUpListen();
-      channel.socket().bind(new InetSocketAddress(port));
+      channel.socket().bind(new InetSocketAddress(address, port));
     }
 
     void listen(String address, int port, int backlog) throws IOException {
       setUpListen();
-      channel.socket().bind(new InetSocketAddress(port), backlog);
+      channel.socket().bind(new InetSocketAddress(address, port), backlog);
     }
 
     void disconnect() throws IOException {

@@ -12,6 +12,9 @@ The API reference is [here](https://developer.chrome.com/apps/sockets_tcpServer)
 
 # Release Notes
 
+## 1.2.4 (Dec 9, 2016)
+- Fix Android ignoring IP address for `listen()`
+
 ## 1.2.3 (April 30, 2015)
 - Renamed plugin to pubilsh to NPM
 

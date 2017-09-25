@@ -523,6 +523,17 @@ public class ChromeSocketsTcpServer extends CordovaPlugin {
         PluginResult errResult = new PluginResult(Status.ERROR, info);
         errResult.setKeepCallback(true);
         acceptContext.sendPluginResult(errResult);
+
+        /* We must close channel and create it again, because on android 7 it isn`t work properly */
+        try {
+          channel.close();
+        } catch (IOException error) {
+          JSONObject err = buildErrorInfo(-2, "Can't close channel");
+          err.put("socketId", socketId);
+          PluginResult errRes = new PluginResult(Status.ERROR, info);
+          errRes.setKeepCallback(true);
+          acceptContext.sendPluginResult(errRes);
+        }
       }
     }
   }
